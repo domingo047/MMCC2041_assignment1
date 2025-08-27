@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>First Task</title>
+    <script src="jquery-3.7.1.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('p').hide();
+            $('img').mouseenter(function() {
+                $('p').fadeIn(3000, 0.5);
+            });
+        });
+    </script>
 </head>
 <body>
     <h1>Welcome</h1>
-    <p>Select a page to visit:</p>
-    <img src="batman.jpg" alt="Picture of Batman">
-    <img src="wonderwoman.jpg" alt="Picture of Wonder Woman">
-    <img src="robin.jpg" alt="Picture of Robin">
-    <img src="superman.jpg" alt="Picture of Superman">
+    <p>Select a page to visit:</p>    
+    <ul><img src="ct1-images/batman.jpg" alt="Picture of Batman"></ul>
+    <p>Batman</p>
+    <ul><img src="ct1-images/wonderwoman.jpg" alt="Picture of Wonder Woman"></ul>
+    <p>Wonder Woman</p>
+    <ul><img src="ct1-images/robin.jpg" alt="Picture of Robin"></ul>
+    <p>Robin</p>
+    <ul><img src="ct1-images/superman.jpg" alt="Picture of Superman"></ul>
+    <p>Superman</p>
 </body>
 </html>
