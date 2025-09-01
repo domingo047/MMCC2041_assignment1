@@ -13,6 +13,7 @@
     position: absolute;
     top: 310px;
     left: 515px;
+    z-index: 4;
 }
 
 .caption {
@@ -26,10 +27,12 @@
     width: 100%;
     box-sizing: border-box;
     padding: 20px 15px;
+    z-index: 3;
 }
 
 .heroImg {
     border: 10px solid #ff9900;
+    z-index: 2;
 }
 
 body {
