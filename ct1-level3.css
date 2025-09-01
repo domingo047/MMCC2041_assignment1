@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+.batmanContainer,
+.wonderwomanContainer,
+.robinContainer,
+.supermanContainer {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 50px;
+}
+
+.badgeImg {
+    position: absolute;
+    top: 310px;
+    left: 515px;
+    z-index: 4;
+}
+
+.caption {
+    background: rgba(60, 65, 104, 0.67);
+    color: #ffffff;
+    font-family: 'Bubblegum Sans', sans-serif;
+    font-size: 32px;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    z-index: 3;
+}
+
+.quote {
+    font-size: 24px;
+    width: 75%;
+}
+
+.heroImg {
+    border: 10px solid #ff9900;
+    z-index: 2;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #999999;
+    background: radial-gradient(circle, rgba(153, 153, 153, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 90px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
