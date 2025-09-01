@@ -7,34 +7,41 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
         $(document).ready(function() {
-            // $('p').hide();
+            $('.caption').hide();
+            $('.character').hover(
+                function() {
+                    $(this).find('.caption').slideDown(200);
+                },
+                function() {
+                    $(this).find('.caption').slideUp(200);
+                }
+            );
         });
     </script>
 </head>
+<body>
+    <section class="character batmanContainer">
+        <img class="heroImg" src="ct1-images/batman.jpg" alt="Picture of Batman">
+        <img class="badgeImg" src="ct1-images/badges/batman_symbol.png" alt="Batman Symbol">
+        <div class="caption">Batman</div>
+    </section>
 
-<body> 
-    <div class = "batmanContainer">
-        <img class = "heroImg" src="ct1-images/batman.jpg" alt="Picture of Batman">
-        <img class = "badgeImg" src="ct1-images/badges/batman_symbol.png" alt="Batman Symbol">
-        <p>Batman</p>
-    </div>
+    <section class="character wonderwomanContainer">
+        <img class="heroImg" src="ct1-images/wonderwoman.jpg" alt="Picture of Wonder Woman">
+        <img class="badgeImg" src="ct1-images/badges/wonderwoman_symbol.png" alt="Wonder Woman Symbol">
+        <div class="caption">Wonder Woman</div>
+    </section>
 
-    <div class = "wonderwomanContainer">
-        <img class = "heroImg" src="ct1-images/wonderwoman.jpg" alt="Picture of Wonder Woman">
-        <img class = "badgeImg" src="ct1-images/badges/wonderwoman_symbol.png" alt="Wonder Woman Symbol">
-        <p>Wonder Woman</p>
-    </div>
+    <section class="character robinContainer">
+        <img class="heroImg" src="ct1-images/robin.jpg" alt="Picture of Robin">
+        <img class="badgeImg" src="ct1-images/badges/robin_symbol.png" alt="Robin Symbol">
+        <div class="caption">Robin</div>
+    </section>
 
-    <div class = "robinContainer">
-        <img class = "heroImg" src="ct1-images/robin.jpg" alt="Picture of Robin">
-        <img class = "badgeImg" src="ct1-images/badges/robin_symbol.png" alt="Robin Symbol">
-        <p>Robin</p>
-    </div>
-
-    <div class = "supermanContainer">
-        <img class = "heroImg" src="ct1-images/superman.jpg" alt="Picture of Superman">
-        <img class = "badgeImg" src="ct1-images/badges/superman_symbol.png" alt="Superman Symbol">
-        <p>Superman</p>
-    </div>
+    <section class="character supermanContainer">
+        <img class="heroImg" src="ct1-images/superman.jpg" alt="Picture of Superman">
+        <img class="badgeImg" src="ct1-images/badges/superman_symbol.png" alt="Superman Symbol">
+        <div class="caption">Superman</div>
+    </section>
 </body>
 </html>
