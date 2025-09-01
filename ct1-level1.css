@@ -1,0 +1,13 @@
+.batmanContainer,
+.wonderwomanContainer,
+.robinContainer,
+.supermanContainer {
+    position: relative;
+    width: fit-content;
+}
+
+.badgeImg {
+    position: absolute;
+    bottom: 40px;
+    right: 5px;
+}
