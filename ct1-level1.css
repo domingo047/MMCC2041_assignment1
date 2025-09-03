@@ -10,6 +10,7 @@
     position: absolute;
     bottom: 10px;
     right: 5px;
+    z-index: 2;
 }
 
 .caption {
@@ -21,7 +22,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
     box-sizing: border-box;
     padding: 30px 15px;
 }

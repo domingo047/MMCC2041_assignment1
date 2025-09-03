@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CT2 Level 2</title>
+    <title>CT2 Level 3</title>
     <link rel="stylesheet" href="ct1-level3.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
@@ -11,9 +11,11 @@
             $('.character').hover(
                 function() {
                     $(this).find('.caption').slideDown(200);
+                    $(this).find('.heroImg, .badgeImg').css('filter', 'grayscale(0%)');
                 },
                 function() {
                     $(this).find('.caption').slideUp(200);
+                    $(this).find('.heroImg, .badgeImg').css('filter', 'grayscale(100%)');
                 }
             );
         });
