@@ -1,62 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+/* This is to import the Bubblegum Sans font from Google Fonts */
 
 .batmanContainer,
 .wonderwomanContainer,
 .robinContainer,
 .supermanContainer {
-    position: relative;
+    position: relative; /* To position badgeImg and caption within this container */
     width: fit-content;
-    margin-bottom: 50px;
+    margin-bottom: 50px; /* Space between rows */
 }
 
 .badgeImg {
     position: absolute;
     top: 310px;
     left: 515px;
-    z-index: 4;
-    filter: grayscale(100%);
+    z-index: 4; /* Ensure badge is above caption when it slides up */
+    filter: grayscale(100%); /* Automatically applied grayscale filter */
+    cursor: pointer; /* Cursor changes to pointer when hovering over image */
 }
 
 .caption {
-    background: rgba(60, 65, 104, 0.67);
-    color: #ffffff;
+    background: rgba(60, 65, 104, 0.67); /* Semi-transparent background for caption*/
+    color: #ffffff; /* White text color */
     font-family: 'Bubblegum Sans', sans-serif;
     font-size: 32px;
     position: absolute;
     bottom: 4px;
     left: 0;
     width: 100%;
-    box-sizing: border-box;
-    padding: 20px 15px;
-    z-index: 3;
+    box-sizing: border-box; /* To fit within the image */
+    padding: 20px 15px; 
+    z-index: 3; /* Ensure caption is above image but below badge */
+    cursor: pointer; /* Cursor changes to pointer when hovering over caption */
+    transition: transform 0.3s ease, opacity 0.2s; /* disappear effect */
+    transform: translateY(25%); /* Where the effect ends */
+    opacity: 0; /* Initially hidden */
 }
 
 .quote {
-    font-size: 24px;
-    width: 75%;
+    font-size: 24px; /* So the quote text is smaller than the name */
+    width: 75%; /* So the quote doesn't hide behind the badge */
 }
 
 .heroImg {
-    border: 10px solid #ff9900;
-    z-index: 2;
-    filter: grayscale(100%);
+    border: 10px solid #ff9900; 
+    filter: grayscale(100%); /* Automatically applied grayscale filter */
+    cursor: pointer; /* Cursor changes to pointer when hovering over image */
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* To center the body content */
+    flex-direction: column; /* helps place items in a column and center them */
+    align-items: center; /* helps center items */
     background: #999999;
-    background: radial-gradient(circle, rgba(153, 153, 153, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: radial-gradient(circle, rgba(153, 153, 153, 1) 0%, rgba(0, 0, 0, 1) 100%); /* white to black radial gradient */
+    background-size: cover; /* Background is centered and covers whole screen */
+    background-attachment: fixed; /* Background doesn't scroll */
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 90px;
-    justify-items: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: grid; /*layout */
+    grid-template-columns: 1fr 1fr; /* length of each column */
+    justify-content: center; 
+    align-content: center;
+    min-height: 100vh; /* Full viewport height */
+    column-gap: 80px; /* Space between columns so the badges doesn't touch with other images */
+}
+
+.character:hover .caption {
+    transform: translateY(0%); /* Slide up effect on hover */
+    opacity: 1; /* Make caption visible on hover */
 }

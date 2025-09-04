@@ -7,27 +7,36 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('.caption').hide();
             $('.character').hover(
                 function() {
-                    $(this).find('.caption').slideDown(200);
-                    $(this).find('.heroImg, .badgeImg').css('filter', 'grayscale(0%)');
+                    $(this).find('.heroImg, .badgeImg').css('filter', 'grayscale(0%)'); //When hovering image has color
                 },
                 function() {
-                    $(this).find('.caption').slideUp(200);
-                    $(this).find('.heroImg, .badgeImg').css('filter', 'grayscale(100%)');
+                    $(this).find('.heroImg, .badgeImg').css('filter', 'grayscale(100%)'); //Sets the color of the images to gray by default
                 }
             );
+            $('.batmanContainer').click(function() {
+                $('body').css('background-image', 'url(ct1-images/backgrounds/batman_background.jpg)'); //Changes bg image when clicked (Batman)
+            })
+            $('.wonderwomanContainer').click(function() {
+                $('body').css('background-image', 'url(ct1-images/backgrounds/wonderwoman_background.jpg)'); //Changes bg image when clicked (Wonder Woman)
+            })
+            $('.robinContainer').click(function() {
+                $('body').css('background-image', 'url(ct1-images/backgrounds/robin_background.jpg)'); //Changes bg image when clicked (Robin)
+            })
+            $('.supermanContainer').click(function() {
+                $('body').css('background-image', 'url(ct1-images/backgrounds/superman_background.jpg)'); //Changes bg image when clicked (Superman)
+            })
         });
     </script>
 </head>
 <body>
-    <div class="grid-container">
-    <section class="character batmanContainer">
+    <div class="grid-container"> <!--Container for the grid layout -->
+    <section class="character batmanContainer"> <!--Container to easily select each character-->
         <img class="heroImg" src="ct1-images/batman.jpg" alt="Picture of Batman">
         <img class="badgeImg" src="ct1-images/badges/batman_symbol.png" alt="Batman Symbol">
         <div class="caption">Batman
-            <div class = "quote"> "It's not who I am underneath, but what I do that defines me." </div>
+            <div class = "quote"> "It's not who I am underneath, but what I do that defines me." </div> <!--Another div inside to have another set of text but still be in the same caption class-->
         </div>
     </section>
 
